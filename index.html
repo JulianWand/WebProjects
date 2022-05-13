@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>TinDog</title>
+
+  <!-- Icon code -->
+  <script src="https://kit.fontawesome.com/4ee858e3c0.js" crossorigin="anonymous"></script>
+
+  <!-- Link font from font.google.com-->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+
+  <!-- If we want local file -->
+  <link rel="stylesheet" href="css/styles.css">
+  <!This is if we want to make styles from our local css file>
+
+  <! Keep in mind that html applies style as we move from top to bottom.
+  Therefore it is preferred to put main styles before from BOOTSTRAP and styles below it which contains
+  local instances like here. Elsethere will be conflict and graphics will not be properly rendered.>
+
+</head>
+
+<body>
+  <section id="title">
+    <div class="container-fluid">
+
+
+    <!-- Nav Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+      <! Same as div but more symentically correct for navigationn bar>
+        <a class="navbar-brand" href="">tindog</a>
+        <! &nbsp is for space which will be displayed on site>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="">Contact</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="">Pricing</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="">Download</a>
+              </li>
+            </ul>
+          </div>
+    </nav>
+    <!-- A way to comment
+    <div class="row">
+      <div class="col" style="background-color:red;border:1px solid;">
+        <! With this structure we can create various number of rows and columns
+        but the problem is that it'll not change dynamically as we shrink website>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-6" style="background-color:green;border:1px solid;">
+        <! using bootstrap by mentioning col-num like col-6 we can divide default 12 elements on screen
+        to the specified num i.e. col will cover screen only the num specified. Again dynamic modification is
+        not possible>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6" style="background-color:green;border:1px solid;">
+        <! using bootstrap by mentioning col-md-num we can create responsive website.
+        md means upto medium tablet size col will take num size and smaller than that it'll split
+        to single>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-3 col-md-4 col-sm-6" style="background-color:green;border:1px solid;">
+        <!This syntax means that when large window site then 12/3 = 4 grids will be shown per row
+        When on medium tablet size then 12/4 = 3 grids will be shown per row.
+        When on small mobile screen size then 12/6 = 2 grids will be shown per row.>
+      </div>
+    </div>
+
+    <! This is how we can do>
+    <div class="row">
+      <div class="col-lg-2 col-md-3 col-sm-12" style="background-color:green;border:1px solid;">
+        <! Here goes text>
+      </div>
+      <div class="col-lg-2 col-md-3 col-sm-12" style="background-color:green;border:1px solid;">
+        <! Here goes text>
+      </div>
+      <div class="col-lg-2 col-md-3 col-sm-12" style="background-color:green;border:1px solid;">
+        <! Here goes text>
+      </div>
+      <div class="col-lg-2 col-md-3 col-sm-12" style="background-color:green;border:1px solid;">
+        <! Here goes text>
+      </div>
+      <div class="col-lg-2 col-md-3 col-sm-12" style="background-color:green;border:1px solid;">
+        <! Here goes text>
+      </div>
+      <div class="col-lg-2 col-md-3 col-sm-12" style="background-color:green;border:1px solid;">
+        <! Here goes text>
+      </div>
+
+    </div>
+
+-->
+    <!-- Title -->
+    <div class="row">
+      <div class="col-lg-6">
+        <h1>Meet new and interesting dogs nearby.</h1>
+        <button type="button" class="btn btn-dark btn-lg download_button"><i class="fab fa-apple"></i> Download</button>
+        <button type="button" class="btn btn-outline-light btn-lg download_button"><i class="fab fa-google-play"></i> Download</button>
+      </div>
+      <div class="col-lg-6 position-relative">
+        <img src="images/iphone6.png" alt="iphone-mockup" class="title_image"></img>
+      </div>
+    </div>
+  </div>
+  </section>
+
+
+<! Container element let anything inside it to be fully responsive based on the size of display
+screen size.
+
+container-fluid will change fluently without any jump.>
+
+
+  <!-- Features -->
+
+  <section id="features">
+    <div class="container feature_pos">
+
+      <div class="row text-center">
+        <div class="col-lg-4">
+          <i class="fas fa-check-circle second_sec_img fa-lg>"></i>
+          <h3>Easy to use.</h3>
+          <p class="feature_text">So easy to use, even your dog could do it.</p>
+        </div>
+        <div class="col-lg-4">
+          <i class="fas fa-bullseye second_sec_img"></i>
+          <h3>Elite Clientele</h3>
+          <p class="feature_text">We have all the dogs, the greatest dogs.</p>
+        </div>
+        <div class="col-lg-4">
+          <i class="fas fa-heart second_sec_img"></i>
+          <h3>Guaranteed to work.</h3>
+          <p class="feature_text">Find the love of your dog's life or your money back.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Testimonials -->
+
+  <section id="testimonials">
+
+  <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <h2>I no longer have to sniff other dogs for love. I've found the hottest Corgi on TinDog. Woof.</h2>
+        <img class="testimonial-image" src="images/dog-img.jpg" alt="dog-profile">
+        <em>Pebbles, New York</em>
+      </div>
+      <div class="carousel-item">
+        <h2 class="testimonial-text">My dog used to be so lonely, but with TinDog's help, they've found the love of their life. I think.</h2>
+        <img class="testimonial-image" src="images/lady-img.jpg" alt="lady-profile">
+        <em>Beverly, Illinois</em>
+      </div>
+
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</section>
+
+
+  <!-- Press -->
+
+  <section id="press">
+    <img class="press_logo" src="images/techcrunch.png" alt="tc-logo">
+    <img class="press_logo" src="images/tnw.png" alt="tnw-logo">
+    <img class="press_logo" src="images/bizinsider.png" alt="biz-insider-logo">
+    <img class="press_logo" src="images/mashable.png" alt="mashable-logo">
+
+  </section>
+
+
+  <!-- Pricing -->
+
+  <section id="pricing">
+
+    <h2>A Plan for Every Dog's Needs</h2>
+    <p>Simple and affordable price plans for your and your dog.</p>
+    <div class="row ">
+      <div class="col-lg-4 col-md-6 pricing_column">
+
+
+      <div class="card">
+        <div class="card-header">
+          <h3>Chihuahua</h3>
+        </div>
+        <div class="card-body d-grid  ">
+          <h2>Free</h2>
+          <p>5 Matches Per Day</p>
+          <p>10 Messages Per Day</p>
+          <p>Unlimited App Usage</p>
+          <button  class="btn btn-lg btn-outline-dark " type="button">Sign Up</button>
+        </div>
+      </div>
+</div>
+<div class="col-lg-4 col-md-6 pricing_column">
+      <div class="card">
+        <div class="card-header">
+          <h3>Labrador</h3>
+        </div>
+        <div class="card-body d-grid  ">
+          <h2>$49 / mo</h2>
+          <p>Unlimited Matches</p>
+          <p>Unlimited Messages</p>
+          <p>Unlimited App Usage</p>
+          <button class="btn  btn-dark btn-lg" type="button">Sign Up</button>
+        </div>
+      </div>
+    </div>
+<div class="col-lg-4 col-md-12 pricing_column">
+      <div class="card">
+        <div class="card-header">
+          <h3>Mastiff</h3>
+        </div>
+        <div class="card-body d-grid  ">
+          <h2>$99 / mo</h2>
+          <p>Pirority Listing</p>
+          <p>Unlimited Matches</p>
+          <p>Unlimited Messages</p>
+          <p>Unlimited App Usage</p>
+          <button class="btn  btn-dark btn-lg" type="button">Sign Up</button>
+</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+
+  <section id="cta">
+
+    <h3 class="cta_head">Find the True Love of Your Dog's Life Today.</h3>
+    <button class="btn btn-lg btn-dark btn_cta" type="button"><i class="fab fa-apple"></i> Download</button>
+    <button class="btn btn-lg btn-light btn_cta" type="button"><i class="fab fa-google-play"></i> Download</button>
+
+  </section>
+
+
+  <!-- Footer -->
+
+  <footer id="footer">
+<div class="footer_img">
+
+
+    <i class="fab footer_img fa-twitter"></i>
+    <i class="fab footer_img fa-facebook-f"></i>
+    <i class="fab footer_img fa-instagram"></i>
+    <i class="fas footer_img fa-envelope"></i>
+  </div>
+    <p class="footer_text">© Copyright 2018 TinDog</p>
+
+  </footer>
+
+
+</body>
+
+</html>
